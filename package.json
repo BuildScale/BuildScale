@@ -23,6 +23,7 @@
     "jasmine-marbles": "0.2.0"
   },
   "devDependencies": {
+    "sass": "^1.32.0",
     "@angular/cli": "1.7.1",
     "@angular/common": "5.2.7",
     "@angular/compiler": "5.2.7",
