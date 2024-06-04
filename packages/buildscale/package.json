@@ -1,0 +1,14 @@
+{
+  "name": "@buildscale/buildscale",
+  "version": "0.0.1",
+  "description": "BuildScale Extensions for Angular",
+  "main": "bundles/buildscale-buildscale.umd.js",
+  "types": "buildscale-buildscale.d.ts",
+  "module": "esm5/buildscale-buildscale.js",
+  "es2015": "esm2015/buildscale-buildscale.js",
+  "dependencies": {
+    "jasmine-marbles": "0.2.0"
+  },
+  "author": "BuildScale",
+  "license": "MIT"
+}
