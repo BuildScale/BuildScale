@@ -1,0 +1,15 @@
+{
+  "name": "@buildscale/buildscale/testing",
+  "typings": "./index.d.ts",
+  "main": "../bundles/buildscale-buildscale-testing.umd.js",
+  "module": "../esm5/buildscale-buildscale-testing.js",
+  "es2015": "../esm2015/buildscale-buildscale-testing.js",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "index.ts",
+      "umdModuleIds": {
+        "jasmine-marbles" : "jasmine-marbles"
+      }
+    }
+  }
+}
