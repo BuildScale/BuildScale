@@ -1,0 +1,10 @@
+import { <%= className %>Loaded } from './<%= fileName %>.actions';
+import { <%= propertyName %>Reducer, initialState } from './<%= fileName %>.reducer';
+
+describe('<%= propertyName %>Reducer', () => {
+  it('should work', () => {
+    const action: <%= className %>Loaded = new <%= className %>Loaded({});
+    const actual = <%= fileName %>Reducer(initialState, action);
+    expect(actual).toEqual({});
+  });
+});

@@ -13,8 +13,8 @@
     "declaration": true,
     "baseUrl": ".",
     "paths": {
-      "@nrwl/schematics": ["./packages/schematics"],
-      "@nrwl/schematics/*": ["./packages/schematics/*"]
+      "@buildscale/schematics": ["./packages/schematics"],
+      "@buildscale/schematics/*": ["./packages/schematics/*"]
     }
   },
   "exclude": [
