@@ -12,7 +12,9 @@ export default {
         json.rules['buildscale-enforce-module-boundaries'][1].depConstraints = [
           { sourceTag: '*', onlyDependOnLibsWithTags: ['*'] }
         ];
-        json.rules['buildscale-enforce-module-boundaries'][1].lazyLoad = undefined;
+        json.rules[
+          'buildscale-enforce-module-boundaries'
+        ][1].lazyLoad = undefined;
       }
     });
   }

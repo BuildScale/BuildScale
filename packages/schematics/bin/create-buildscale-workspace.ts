@@ -73,7 +73,9 @@ if (!projectName) {
 }
 
 // creating the sandbox
-console.log(`Creating a sandbox with the CLI and BuildScale ${buildscaleTool.name}...`);
+console.log(
+  `Creating a sandbox with the CLI and BuildScale ${buildscaleTool.name}...`
+);
 const tmpDir = dirSync().name;
 const buildscaleVersion = readJsonFile(
   path.join(path.dirname(__dirname), 'package.json')

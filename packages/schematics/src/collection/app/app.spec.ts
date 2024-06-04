@@ -193,7 +193,12 @@ describe('app', () => {
     it('should include RouterTestingModule', () => {
       const tree = schematicRunner.runSchematic(
         'app',
-        { name: 'myApp', npmScope: 'buildscale', directory: 'myDir', routing: true },
+        {
+          name: 'myApp',
+          npmScope: 'buildscale',
+          directory: 'myDir',
+          routing: true
+        },
         appTree
       );
       expect(

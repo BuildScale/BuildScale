@@ -71,7 +71,12 @@ function addBuildScaleModule(path: string): Rule {
       true
     );
     insert(host, modulePath, [
-      insertImport(sourceFile, modulePath, 'BuildScaleModule', '@buildscale/buildscale'),
+      insertImport(
+        sourceFile,
+        modulePath,
+        'BuildScaleModule',
+        '@buildscale/buildscale'
+      ),
       ...addImportToModule(sourceFile, modulePath, 'BuildScaleModule.forRoot()')
     ]);
     return host;

@@ -93,7 +93,12 @@ export function updateNgrxEffects(context: RequestContext): Rule {
     insert(host, componentPath, [
       insertImport(source, modulePath, actionImports, actionsFile),
       insertImport(source, modulePath, `${clazzName}State`, featureReducer),
-      insertImport(source, modulePath, 'DataPersistence', `@buildscale/buildscale`),
+      insertImport(
+        source,
+        modulePath,
+        'DataPersistence',
+        `@buildscale/buildscale`
+      ),
       updateConstructor(),
       addEffect$()
     ]);

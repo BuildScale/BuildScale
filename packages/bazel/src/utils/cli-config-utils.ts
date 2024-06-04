@@ -26,7 +26,9 @@ export function getAppDirectoryUsingCliConfig() {
 
 export function makeSureNoAppIsSelected() {
   if (getAppName()) {
-    console.error('BuildScale only supports running unit tests for all apps and libs.');
+    console.error(
+      'BuildScale only supports running unit tests for all apps and libs.'
+    );
     console.error('You cannot use -a or --app.');
     console.error('Use fdescribe or fit to select a subset of tests to run.');
     process.exit(1);

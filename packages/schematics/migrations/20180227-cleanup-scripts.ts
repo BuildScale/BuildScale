@@ -17,7 +17,10 @@ export default {
         'e2e:affected': undefined
       };
 
-      if (json.scripts.postinstall === './node_modules/.bin/buildscale migrate check') {
+      if (
+        json.scripts.postinstall ===
+        './node_modules/.bin/buildscale migrate check'
+      ) {
         json.scripts.postinstall = './node_modules/.bin/buildscale postinstall';
       }
     });

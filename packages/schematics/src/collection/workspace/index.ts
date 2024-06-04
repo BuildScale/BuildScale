@@ -83,18 +83,26 @@ function updatePackageJson() {
       './node_modules/.bin/buildscale affected apps';
     packageJson.scripts['affected:build'] =
       './node_modules/.bin/buildscale affected build';
-    packageJson.scripts['affected:e2e'] = './node_modules/.bin/buildscale affected e2e';
+    packageJson.scripts['affected:e2e'] =
+      './node_modules/.bin/buildscale affected e2e';
 
-    packageJson.scripts['format'] = './node_modules/.bin/buildscale format write';
-    packageJson.scripts['format:write'] = './node_modules/.bin/buildscale format write';
-    packageJson.scripts['format:check'] = './node_modules/.bin/buildscale format check';
+    packageJson.scripts['format'] =
+      './node_modules/.bin/buildscale format write';
+    packageJson.scripts['format:write'] =
+      './node_modules/.bin/buildscale format write';
+    packageJson.scripts['format:check'] =
+      './node_modules/.bin/buildscale format check';
 
     packageJson.scripts['update'] = './node_modules/.bin/buildscale update';
-    packageJson.scripts['update:check'] = './node_modules/.bin/buildscale update check';
-    packageJson.scripts['update:skip'] = './node_modules/.bin/buildscale update skip';
+    packageJson.scripts['update:check'] =
+      './node_modules/.bin/buildscale update check';
+    packageJson.scripts['update:skip'] =
+      './node_modules/.bin/buildscale update skip';
 
-    packageJson.scripts['lint'] = './node_modules/.bin/buildscale lint && ng lint';
-    packageJson.scripts['postinstall'] = './node_modules/.bin/buildscale postinstall';
+    packageJson.scripts['lint'] =
+      './node_modules/.bin/buildscale lint && ng lint';
+    packageJson.scripts['postinstall'] =
+      './node_modules/.bin/buildscale postinstall';
 
     return packageJson;
   });
@@ -218,7 +226,9 @@ function updateTsLint() {
       tslintJson[key] = undefined;
     });
     tslintJson.rulesDirectory = tslintJson.rulesDirectory || [];
-    tslintJson.rulesDirectory.push('node_modules/@buildscale/schematics/src/tslint');
+    tslintJson.rulesDirectory.push(
+      'node_modules/@buildscale/schematics/src/tslint'
+    );
     tslintJson['buildscale-enforce-module-boundaries'] = [
       true,
       {

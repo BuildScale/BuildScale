@@ -22,8 +22,12 @@ describe('Nrwl Convert to BuildScale Workspace', () => {
     packageJson.description = 'some description';
     updateFile('package.json', JSON.stringify(packageJson, null, 2));
     // confirm that @buildscale and @ngrx dependencies do not exist yet
-    expect(packageJson.devDependencies['@buildscale/schematics']).not.toBeDefined();
-    expect(packageJson.dependencies['@buildscale/buildscale']).not.toBeDefined();
+    expect(
+      packageJson.devDependencies['@buildscale/schematics']
+    ).not.toBeDefined();
+    expect(
+      packageJson.dependencies['@buildscale/buildscale']
+    ).not.toBeDefined();
     expect(packageJson.dependencies['@ngrx/store']).not.toBeDefined();
     expect(packageJson.dependencies['@ngrx/effects']).not.toBeDefined();
     expect(packageJson.dependencies['@ngrx/router-store']).not.toBeDefined();
@@ -57,7 +61,9 @@ describe('Nrwl Convert to BuildScale Workspace', () => {
     expect(
       updatedPackageJson.devDependencies['@buildscale/schematics']
     ).toBeDefined();
-    expect(updatedPackageJson.dependencies['@buildscale/buildscale']).toBeDefined();
+    expect(
+      updatedPackageJson.dependencies['@buildscale/buildscale']
+    ).toBeDefined();
     expect(updatedPackageJson.dependencies['@ngrx/store']).toBeDefined();
     expect(updatedPackageJson.dependencies['@ngrx/effects']).toBeDefined();
     expect(updatedPackageJson.dependencies['@ngrx/router-store']).toBeDefined();
@@ -118,8 +124,12 @@ describe('Nrwl Convert to BuildScale Workspace', () => {
     const ngrxVersion = '0.0.0';
     // update package.json
     const existingPackageJson = readJson('package.json');
-    existingPackageJson.devDependencies['@buildscale/schematics'] = schematicsVersion;
-    existingPackageJson.dependencies['@buildscale/buildscale'] = buildscaleVersion;
+    existingPackageJson.devDependencies[
+      '@buildscale/schematics'
+    ] = schematicsVersion;
+    existingPackageJson.dependencies[
+      '@buildscale/buildscale'
+    ] = buildscaleVersion;
     existingPackageJson.dependencies['@ngrx/store'] = ngrxVersion;
     existingPackageJson.dependencies['@ngrx/effects'] = ngrxVersion;
     existingPackageJson.dependencies['@ngrx/router-store'] = ngrxVersion;
@@ -132,7 +142,9 @@ describe('Nrwl Convert to BuildScale Workspace', () => {
     expect(packageJson.devDependencies['@buildscale/schematics']).toEqual(
       schematicsVersion
     );
-    expect(packageJson.dependencies['@buildscale/buildscale']).toEqual(buildscaleVersion);
+    expect(packageJson.dependencies['@buildscale/buildscale']).toEqual(
+      buildscaleVersion
+    );
     expect(packageJson.dependencies['@ngrx/store']).toEqual(ngrxVersion);
     expect(packageJson.dependencies['@ngrx/effects']).toEqual(ngrxVersion);
     expect(packageJson.dependencies['@ngrx/router-store']).toEqual(ngrxVersion);

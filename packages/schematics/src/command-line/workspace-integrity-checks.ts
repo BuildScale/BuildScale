@@ -23,7 +23,9 @@ export class WorkspaceIntegrityChecks {
 
   private packageJsonConsistencyCheck(): ErrorGroup[] {
     const buildscale = this.packageJson.dependencies['@buildscale/buildscale'];
-    const schematics = this.packageJson.devDependencies['@buildscale/schematics'];
+    const schematics = this.packageJson.devDependencies[
+      '@buildscale/schematics'
+    ];
     if (buildscale !== schematics) {
       return [
         {

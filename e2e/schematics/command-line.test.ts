@@ -23,7 +23,8 @@ describe('Command line', () => {
       const tslint = readJson('tslint.json');
       tslint.rules['buildscale-enforce-module-boundaries'][1].depConstraints = [
         { sourceTag: 'validtag', onlyDependOnLibsWithTags: ['validtag'] },
-        ...tslint.rules['buildscale-enforce-module-boundaries'][1].depConstraints
+        ...tslint.rules['buildscale-enforce-module-boundaries'][1]
+          .depConstraints
       ];
       updateFile('tslint.json', JSON.stringify(tslint, null, 2));
 
