@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: '16' # Specify the Node.js version you need
 
+      - name: Install Python 2
+        run: sudo apt-get install python2
+
       - name: Install Yarn
         run: npm install --global yarn
 
