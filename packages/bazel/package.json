@@ -10,8 +10,8 @@
   "schematics": "./src/collection.json",
   "dependencies": {
     "app-root-path": "^2.0.1",
-    "semver": "5.4.1",
+    "semver": "5.7.2",
     "tmp": "0.0.33",
-    "yargs-parser": "9.0.2"
+    "yargs-parser": "13.1.2"
   }
 }
